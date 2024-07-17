@@ -42,3 +42,5 @@ app.listen(port, (err) => {
     console.log(`Server started in PORT | ${port}`)
     logger.info(`Server started in PORT | ${port}`)
 })
+
+module.exports = app;
