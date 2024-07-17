@@ -17,6 +17,10 @@ app.use(cors())
 app.use(express.json())
 app.use(requestLogger)
 
+app.get('/', (req, res) => {
+    res.send('API working perfectly');
+})
+
 app.use('/api/users', usersRouter)
 app.use('/api/group', apiAuth.validateToken,gorupRouter)
 app.use('/api/expense', apiAuth.validateToken,expenseRouter)
